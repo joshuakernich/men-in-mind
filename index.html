@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>LMS</title>
+
+	<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+	<style type="text/css">
+		@font-face {
+			font-family: "BodyFont";
+			src: url("./Overpass-Light.ttf");
+		}
+
+		@font-face {
+		  font-family: BodyFont;
+		  src: url("./Overpass-Bold.ttf");
+		  font-weight: bold;
+		}	
+
+		body{
+			font-family: "BodyFont";
+			padding: 0px;
+			margin: 0px;
+			-webkit-text-size-adjust: 100%;
+			-moz-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			text-size-adjust: 100%;
+			font-weight: normal;
+		}
+
+		.header{
+			height: 100px;
+			text-align: right;
+			line-height: 50px;
+			padding-right: 20px;
+		}
+
+		.course{
+			list-style-type: none;
+			max-width: 640px;
+			text-align: left;
+			margin: auto;
+		}
+
+		.course li{
+			display: inline-block;
+			width: 200px;
+			height: 200px;
+			background: #333;
+			color: white;
+			vertical-align: top;
+			font-size: 25px;
+			font-weight: normal;
+			box-sizing: border-box;
+			padding: 15px;
+			line-height: 28px;
+			margin: 5px;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			opacity: 0.3;
+		}
+
+		.course li.test{
+			background: purple;
+		}
+
+		.course li.n1{
+			background-image: url('./masculine.jpg');
+		}
+
+		.course li.n2{
+			background-image: url('./you.jpg');
+		}
+
+		.course li:nth-of-type(1),.course li:nth-of-type(2),.course li:nth-of-type(3){
+			opacity: 1;
+		}
+
+		.course li:before{
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			background: rgba(0,0,0,0.5);
+		}
+
+		.course h1{
+			font: inherit;
+			position: relative;
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.login{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			background: white;
+			height: 100vh;
+			z-index: 1;
+			background-image: url('./banner.jpg');
+			background-size: cover;
+			background-position: center;
+		}
+
+		.login-panel{
+			width: 300px;
+			margin: 100px auto;
+			padding: 50px;
+			background: rgba(255,255,255,0.8);
+		}
+
+		input,button{
+			width: 100%;
+			font: inherit;
+			padding: 10px;
+			border: 1px solid black;
+			box-sizing: border-box;
+			margin: 5px;
+		}
+
+		button{
+			background: black;
+			color: white;
+		}
+
+		.tick:after{
+			content: "";
+			position: absolute;
+
+			right: 20px;
+			bottom: 20px;
+			width: 50px;
+			height: 50px;
+			background: white;
+			display: inline-block;
+			margin: auto;
+
+			font-size: 40px;
+			line-height: 50px;
+			color: black;
+			text-align: center;
+			border-radius: 100px;
+			background-image: url('./check.png');
+			background-position: center;
+			background-size: 50%;
+			background-repeat: no-repeat;
+		}
+
+		.pie{
+			content: "";
+			position: absolute;
+
+			right: 20px;
+			bottom: 20px;
+			width: 50px;
+			height: 50px;
+			background: white;
+			display: inline-block;
+			margin: auto;
+
+			font-size: 40px;
+			line-height: 50px;
+			color: black;
+			text-align: center;
+			border-radius: 100px;
+
+			background-size: cover;
+			background-position: center;
+		}
+
+		.pie:after{
+			content: "";
+			width: 40px;
+			height: 40px;
+			border: 7px solid black;
+			margin: 5px;
+			box-sizing: border-box;
+			display: inline-block;
+			border-radius: 100px;
+			clip-path: inset(0px 0px 20px 20px);
+
+		}
+
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$('button').click(function(){
+				$('.login').hide();
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="login">
+		<div class='login-panel'>
+			<img src="./logo-black.png" width=100%>
+			<input placeholder='username' type="" name="">
+			<input placeholder='password' type="" name="">
+			<button>Log in</button>
+		</div>
+	</div>
+	<div class='header'>Joshua Kernich ▽</div>
+	<ul class='course'>
+		<li class='test tick'><h1>Pre-test</h1></li><li class='n1 tick'><h1>Rebranding masculinity</h1></li><li class='n2'><h1>Your gender, your practice, your rules</h1><div class='pie'></div></li><li><h1>The hook</h1></li><li><h1>The depressed man</h1></li><li><h1>Saving those 1000 lives</h1></li><li class='test'><h1>Post-test</h1></li><li class='test'><h1>Bongo</h1></li>
+	</ul>
+</body>
+</html>
